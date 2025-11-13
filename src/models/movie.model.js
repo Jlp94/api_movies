@@ -1,4 +1,6 @@
 const mongoose = require('mongoose');
+//npm install mongoose-sequence , Libreria para usar autoincrement
+const AutoIncrement = require('mongoose-sequence')(mongoose);
 const {Schema} = mongoose;
 
 
@@ -20,6 +22,9 @@ const movieSchema = new Schema({
         timestamps: true,
         versionKey: false
     });
+
+// Le indicas que quieres que el campo autoincremental se llame 'movieId'
+movieSchema.plugin(AutoIncrement, { inc_field: 'movieId' });
 
 module.exports = mongoose.model('Movie', movieSchema, 'movies');
 // por defecto se crea una coleccion con el nombre del modelo anyadiendo una s al final
