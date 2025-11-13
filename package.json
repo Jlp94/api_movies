@@ -1,0 +1,25 @@
+{
+  "name": "API_movies",
+  "version": "1.0.0",
+  "description": "Mi primera API con Node.js",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node --watch src/index.js",
+    "start": "node src/index.js"
+  },
+  "keywords": [
+    "Node",
+    "API"
+  ],
+  "author": "Jose Luis Prieto",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "mongodb": "^7.0.0",
+    "mongoose": "^8.19.3",
+    "morgan": "^1.10.1"
+  }
+}
