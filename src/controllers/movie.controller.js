@@ -175,6 +175,24 @@ movieController.deleteMovie = async (req, res) => {
         })
 }
 
+// GET GENRES
+movieController.getGenres = async (req, res ) =>{
+    await Movie.find().distinct('genres')
+        .then(genres => {
+            res.status(200).json({
+                status: true,
+                genres
+            })
+        })
+        .catch(err => {
+            res.status(400).json({
+                status: false,
+                message: err.message
+            })
+        })
+
+}
+
 // movieController.addManyMovies = async (req, res, next) => {
 //     try {
 //         const payload = req.body;
@@ -187,5 +205,7 @@ movieController.deleteMovie = async (req, res) => {
 //         return next ? next(err) : res.status(500).json({ message: 'Error insertando películas', error: err.message });
 //     }
 // };
+
+
 
 module.exports = movieController;

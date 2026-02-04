@@ -13,6 +13,7 @@ router.put('/:id',movieController.putMovie);
 router.patch('/:id',movieController.patchMovie);
 router.delete('/:id',movieController.deleteMovie);
 
+router.get('/genres', movieController.getGenres);
 
 // para permitir montar las rutas de las peticiones https -> GET, POST, PUT, PATH , DELETE
 module.exports = router;
