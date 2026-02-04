@@ -22,8 +22,24 @@ app.use(express.json());
 app.use(morgan('dev'));
 
 // Routes
+app.get('/api/v1', (req, res) => {
+    res.status(200).json({
+        message: 'Welcome to Movie API Project',
+        version: '1.0.0',
+        author: 'Jose Luis Prieto',
+        endpoints: {
+            getAllMovies: '/api/v1/movies',
+            getOneMovie: '/api/v1/movies/movie/:id',
+            getGenres: '/api/v1/movies/genres',
+            addMovie: '/api/v1/movies (POST)',
+            updateMovie: '/api/v1/movies/:id (PUT/PATCH)',
+            deleteMovie: '/api/v1/movies/:id (DELETE)'
+        }
+    });
+});
+
 app.use('/api/v1/movies', require('./routes/movie.route'))
-app.use('', (req, res) => { res.status(404).json({ message: 'API is in /api/v1/movies' }) })
+app.use('', (req, res) => { res.status(404).json({ message: 'Route not found. Try /api/v1 for the endpoint list.' }) })
 
 // Start the server
 if (process.env.NODE_ENV !== 'production') {
