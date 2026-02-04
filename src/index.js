@@ -31,9 +31,9 @@ app.get('/api/v1', (req, res) => {
             getAllMovies: 'https://api-movies-three.vercel.app/api/v1/movies',
             getOneMovie: 'https://api-movies-three.vercel.app/api/v1/movies/movie/:id',
             getGenres: 'https://api-movies-three.vercel.app/api/v1/movies/genres',
-            addMovie: 'https://api-movies-three.vercel.app/api/v1/movies (POST)',
-            updateMovie: 'https://api-movies-three.vercel.app/api/v1/movies/:id (PUT/PATCH)',
-            deleteMovie: 'https://api-movies-three.vercel.app/api/v1/movies/:id (DELETE)'
+            addMovie: 'https://api-movies-three.vercel.app/api/v1/movies',
+            updateMovie: 'https://api-movies-three.vercel.app/api/v1/movies/:id',
+            deleteMovie: 'https://api-movies-three.vercel.app/api/v1/movies/:id'
         }
     });
 });
