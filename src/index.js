@@ -28,12 +28,12 @@ app.get('/api/v1', (req, res) => {
         version: '1.0.0',
         author: 'Jose Luis Prieto',
         endpoints: {
-            getAllMovies: '/api/v1/movies',
-            getOneMovie: '/api/v1/movies/movie/:id',
-            getGenres: '/api/v1/movies/genres',
-            addMovie: '/api/v1/movies (POST)',
-            updateMovie: '/api/v1/movies/:id (PUT/PATCH)',
-            deleteMovie: '/api/v1/movies/:id (DELETE)'
+            getAllMovies: 'https://api-movies-three.vercel.app/api/v1/movies',
+            getOneMovie: 'https://api-movies-three.vercel.app/api/v1/movies/movie/:id',
+            getGenres: 'https://api-movies-three.vercel.app/api/v1/movies/genres',
+            addMovie: 'https://api-movies-three.vercel.app/api/v1/movies (POST)',
+            updateMovie: 'https://api-movies-three.vercel.app/api/v1/movies/:id (PUT/PATCH)',
+            deleteMovie: 'https://api-movies-three.vercel.app/api/v1/movies/:id (DELETE)'
         }
     });
 });
