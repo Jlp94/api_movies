@@ -5,6 +5,14 @@ const morgan = require('morgan');
 const mongoose = require('./database');
 require('dotenv').config();
 
+console.log("--- DEBUG LOGS ---");
+console.log("DB URL defined:", !!process.env.URL);
+if (process.env.URL) {
+    console.log("DB URL length:", process.env.URL.length);
+}
+console.log("NODE_ENV:", process.env.NODE_ENV);
+console.log("------------------");
+
 // Settings
 app.set('port', process.env.PORT || 3000);
 
